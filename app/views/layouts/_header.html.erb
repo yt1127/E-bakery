@@ -1,12 +1,42 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
+<header style="z-index:1000;">
+
+  <!-- ヘッダー背景 -->
+  <div class="nav-bg"></div>
+
+  <!-- ロゴ -->
+  <div class="logo" style="z-index:9999;">
+    <%= link_to image_tag("bakery.png", alt: "Logo"), root_path %>
+  </div>
+
+  <!-- ヘッダーナビゲーション -->
+  <div id="nav-header">
     <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",    root_path %></li>
-        <li><%= link_to "Help",    help_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
+      <ul>
+        <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "パンを使った食事",   help_path %></li>
+        <li><%= link_to "パンの種類",   type_path %></li>
       </ul>
     </nav>
   </div>
+
+<!-- ハンバーガーメニューアイコン -->
+  <div id="nav-toggle">
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+<!-- ハンバーガーメニューウインドウ -->
+  <div id="nav-window">
+    <nav>
+      <ul>
+        <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "パンを使った食事",   help_path %></li>
+        <li><%= link_to "パンの種類",   '#' %></li>
+      </ul>
+    </nav>
+  </div>
+
 </header>

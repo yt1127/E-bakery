@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   get  '/contact', to: 'static_pages#contact'
 
+  get  '/type',   to: 'static_pages#type'
+
+  get  '/making',   to: 'static_pages#making'
 end

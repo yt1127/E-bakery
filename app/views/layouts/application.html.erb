@@ -9,11 +9,12 @@
                                'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
+
   <body>
     <%= render 'layouts/header' %>
-      <div class="container">
+    <div>
       <%= yield %>
-      <%= render 'layouts/footer' %>
     </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
