@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "slick-theme"; 
+@import "slick";
 
 //自サイト用の専用配色
 $my-color1: #FFAB0B;
@@ -189,15 +190,30 @@ header {
 
 /* 写真右寄せ */
 .imgR {
-  clear:both;
+  // border: solid 1px green;
+  clear:both;               // 画像の反対に回り込み
   overflow:hidden;
   margin-bottom:50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
-    float:right;
-    margin:0 0 2em 2em;
+    // border: solid 1px green;
+    width: 80%;
+    height: 80%;
+    float: right;
+    margin: 0 auto;
     border-radius:5px;
   }
 }
+  .imgtopB {
+    text-align: center;
+    img {
+      width: 50%;
+      height: 90%;
+      border-radius:5px;
+    }
+  }
 
 /* 通常の領域 */
 .normal-area {
@@ -337,4 +353,131 @@ header {
   .grid-content {
     width: 100%;
   }
+}
+
+/*================================================
+ *  makingページ向けスタイル
+ ================================================*/
+
+.box11{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    
+  p {
+    margin: 0; 
+    padding: 0;
+  }
+}
+.making-comment {
+    display: flex;
+  }
+
+
+.resipi {
+    // border: solid 1px green;
+    width:500px;
+    font-size: 16px;
+    color:#333333;
+    padding:20px;  
+    // display: flex;
+   ul {
+    // border: solid 1px green;
+     padding-left: 0;
+     margin-left: 40px;
+     border-top: 1px solid #84b2e0;
+     border-bottom: 1px solid #f1f6fc;
+   
+   li {
+    // border: solid 1px green;
+    // list-style-type : none;
+    padding:5px 10px;
+    border-bottom:1px solid #84b2e0;  
+      
+      }
+    }
+  }
+
+  .baking {
+    border: solid 1px green;
+    // background-color: $my-color1;
+    width:100%;
+    font-size: 20px;
+    color:#333333;
+    padding: 20px;  
+    border: 10px solid #84b2e0;
+    
+   ol {
+    // border: solid 1px green;
+     padding-left: 0;
+     margin-left: 40px;
+    //  border-top: 10px solid #84b2e0;
+    //  border-bottom: 1px solid #f1f6fc;
+   
+   li {
+    // border: solid 1px green;
+    // list-style-type : none;
+    padding:5px 10px;
+    border-bottom:2px solid #84b2e0;  
+      img {
+        width: 200px;
+        height: 150px;
+        }
+      }
+    }
+  }
+
+  .homelink {
+    font-size: calc(80% + 0.5vw);
+    width: 93vw;
+    height: 36px;
+    transition: .5s ease-in-out;
+    }
+/*================================================
+ *  slick用スタイル
+ ================================================*/
+
+.container2 {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: $my-color1;
+}
+
+.slick-slide {
+  text-align: center;
+  color: $my-color1;
+  background: $my-color1;
+  img {
+    // border: solid 1px green;
+    height: 70%;
+    width: 70%;
+    background-color: $my-color1;
+    margin: 10px auto;
+  }
+}
+
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.prev-arrow {
+  left: -20px;
+}
+
+.next-arrow {
+  right: -20px;
 }

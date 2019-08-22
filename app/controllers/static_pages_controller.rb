@@ -14,6 +14,19 @@ class StaticPagesController < ApplicationController
   def type
   end
 
-  def making
+  def making1
   end
+
+  def making2
+  end
+
+  def making3
+  end
+
+  def making4
+  end
+
+  def making5
+  end
+
 end

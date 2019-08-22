@@ -9,5 +9,14 @@ Rails.application.routes.draw do
 
   get  '/type',   to: 'static_pages#type'
 
-  get  '/making',   to: 'static_pages#making'
+  get  '/making1',   to: 'static_pages#making1'
+
+  get  '/making2',   to: 'static_pages#making2'
+  
+  get  '/making3',   to: 'static_pages#making3'
+
+  get  '/making4',   to: 'static_pages#making4'
+
+  get  '/making5',   to: 'static_pages#making5'
+  
 end

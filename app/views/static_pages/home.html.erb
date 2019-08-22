@@ -2,55 +2,44 @@
 
 <div id="contents">
 
+  <div class='container2'>
+    <div class='single-item'>
+        <div>
+          <%= image_tag "bread.jpg", alt: "Harry" %>
+        </div>
+        <div>
+          <%= image_tag "bread01.jpg", alt: "Harry" %>
+        </div>
+        <div>
+          <%= image_tag "bread02.jpg", alt: "Harry" %>
+        </div>
+        <div>
+          <%= image_tag "bread03.png", alt: "Harry" %>
+        </div>
+        <div>
+          <%= image_tag "bread04.png", alt: "Harry" %>
+        </div>
+        <div>
+          <%= image_tag "bread05.png", alt: "Harry" %>
+        </div>
+    </div>
+  </div>
+
+
   <!-- １番目のコンテンツ -->
   <div class="down-appear-trigger">
   <div class="normal-area down-appear">
     <div class="normal-block">
-      <div class="imgR">
-        <%= image_tag "bread.jpg", alt: "Harry" %>
-        <h1>ピコン！<br>とひらめく力！！</h1>
-        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！</p>
+      <div class="imgtopB"> 
+        <h2>美味しいパンを作ってみませんか？</h2>
+        <%= image_tag "topbread.jpg", alt: "Harry" %>
+        <p>お家でパンを作ってみませんか？ここではパンの種類やご自宅でも作れるようにレシピ紹介をしています。</p>
       </div>
     </div>
   </div>
 
 
-  <!-- ２番目のコンテンツ -->
-  <div class="up-appear-trigger">
-  <div class="non-background-area up-appear">
-    <div class="white-block block2">
-      <div class="imgR">
-        <%= image_tag "harry01.png", alt: "Harry" %>
-        <h1>ピコン！<br>とひらめく力！！</h1>
-        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！</p>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ３番目のコンテンツ -->
-  <div class="left-slide-trigger">
-  <div class="normal-area left-slide">
-    <div class="normal-block">
-      <div class="imgL">
-        <%= image_tag "harry01.png", alt: "Harry" %>
-        <h1>ピコン！<br>とひらめく力！！</h1>
-        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！</p>
-      </div>  
-    </div>
-  </div>
-
-  <!-- ４番目のコンテンツ -->
-  <div class="right-slide-trigger">
-  <div class="normal-area right-slide">
-    <div class="normal-block">
-      <div class="imgL">
-        <%= image_tag "harry01.png", alt: "Harry" %>
-        <h1>ピコン！<br>とひらめく力！！</h1>
-        <p>楽しくプログラミングする、まったり、ゆっくりな小動物、ハリー教授です！！</p>
-      </div>  
-    </div>
-  </div>
+  
 
   <!-- 領域全体 -->
   <section class="non-background-area grid-block">
@@ -62,7 +51,7 @@
       <div class="grid-content grid-block-1">
         <!-- イメージ -->
         <div class="grid-content-image hover:shadow-raised hover:translateY-2px transition">
-          <%= link_to image_tag("bread02.png", alt: "Harry"), making_path %>
+          <%= link_to image_tag("bread02.png", alt: "Harry"), making1_path %>
           <!-- テキスト -->
           <div class="grid-content-text">
             <h4><%= "パン・トラディショナル".truncate(13) %></h4>
@@ -74,7 +63,7 @@
       <div class="grid-content grid-block-2">
         <!-- イメージ -->
         <div class="grid-content-image hover:shadow-raised hover:translateY-2px transition">
-          <%= image_tag "bread03.png", alt: "Harry" %>
+          <%= link_to image_tag("bread03.png", alt: "Harry"), making2_path %>
           <!-- テキスト -->
           <div class="grid-content-text">
             <h4><%= "ブロート、セーグル".truncate(13) %></h4>
@@ -87,7 +76,7 @@
       <div class="grid-content grid-block-3">
         <!-- イメージ -->
         <div class="grid-content-image hover:shadow-raised hover:translateY-2px transition">
-          <%= image_tag "bread04.png", alt: "Harry" %>
+          <%= link_to image_tag("bread04.png", alt: "Harry"), making3_path %>
           <!-- テキスト -->
           <div class="grid-content-text">
             <h4><%= "クロワッサン,デニッシュ ".truncate(13) %></h4>
@@ -99,7 +88,7 @@
       <div class="grid-content grid-block-4">
         <!-- イメージ -->
         <div class="grid-content-image hover:shadow-raised hover:translateY-2px transition">
-          <%= image_tag "bread05.png", alt: "Harry" %>
+          <%= link_to image_tag("bread05.png", alt: "Harry"), making4_path %>
           <!-- テキスト -->
           <div class="grid-content-text">
             <h4><%= "ベーグル".truncate(13) %></h4>
@@ -111,7 +100,7 @@
       <div class="grid-content grid-block-5">
         <!-- イメージ -->
         <div class="grid-content-image hover:shadow-raised hover:translateY-2px transition">
-          <%= image_tag "bread06.png", alt: "Harry" %>
+          <%= link_to image_tag("bread06.png", alt: "Harry"), making5_path %>
           <!-- テキスト -->
           <div class="grid-content-text">
             <h4><%= "ブリオッシュ".truncate(13) %></h4>
@@ -121,3 +110,22 @@
       
   </section>
 </div>
+
+
+<script>
+$(function(){
+  $('.single-item').slick({
+    accessibility: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: false,
+    fade: true,
+    arrows: false,
+    prevArrow: '<span class="prev-arrow">&lt;</span>',
+    nextArrow: '<span class="next-arrow">&gt;</span>',
+    
+  });
+
+  
+});
+</script>
