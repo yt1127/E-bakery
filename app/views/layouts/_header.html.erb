@@ -12,8 +12,8 @@
   <div id="nav-header">
     <nav>
       <ul>
-        <li><%= link_to "ホーム",   root_path %></li>
-        <li><%= link_to "パンを使った食事",   help_path %></li>
+        <li><%= link_to "ホーム",   root_path, data: {"turbolinks" => false} %></li>
+        <li><%= link_to "パンを使った食事",   "#" %></li>
         <li><%= link_to "パンの種類",   type_path %></li>
       </ul>
     </nav>
@@ -32,9 +32,9 @@
   <div id="nav-window">
     <nav>
       <ul>
-        <li><%= link_to "ホーム",   root_path %></li>
-        <li><%= link_to "パンを使った食事",   help_path %></li>
-        <li><%= link_to "パンの種類",   '#' %></li>
+        <li><%= link_to "ホーム",   root_path, data: {"turbolinks" => false} %></li>
+        <li><%= link_to "パンを使った食事",   "#" %></li>
+        <li><%= link_to "パンの種類",   type_path %></li>
       </ul>
     </nav>
   </div>
